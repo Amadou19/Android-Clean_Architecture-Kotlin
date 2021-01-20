@@ -1,11 +1,11 @@
 # Android Clean Architecture Kotlin
 
 Use:
-	Clean Architecture, MVVM, Dagger2
-	RXKotlin - RXJava - RXAndroid, AndroidX
-	LiveData, ViewModel, Lifecycles, Room
-	Retrofit - OKHttp - Picasso - Timber
- Junit, Mockito, Robolectric
+Clean Architecture, MVVM, Dagger2 \
+RXKotlin - RXJava - RXAndroid, AndroidX \
+LiveData, ViewModel, Lifecycles, Room \
+Retrofit - OKHttp - Picasso - Timber \
+Junit, Mockito, Robolectric \
 
 Points of improvement for a V2: use a pagination to display the Albums package by package as you scroll.
 
