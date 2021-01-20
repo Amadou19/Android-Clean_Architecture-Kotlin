@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Albums</string>
+    <string name="title_activity_list_albums">List Abums</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="album">Album:</string>
+    <string name="titre">Titre:</string>
+    <string name="try_again">Réessayer</string>
+    <string name="error">Une erreur est survenue</string>
+</resources>

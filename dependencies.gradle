@@ -1,0 +1,214 @@
+ext {
+
+    //Android
+    androidMinSdkVersion = 21
+    androidTargetSdkVersion = 30
+    androidCompileSdkVersion = 30
+    buildToolsVersion = '30.0.2'
+    kotlinVersion = '1.3.41'
+
+    //Libraries
+    javaxAnnotationVersion = '1.0'
+    javaxInjectVersion = '1'
+    rxJavaVersion = '2.2.3'
+    rxKotlinVersion = '2.3.0'
+    rxAndroidVersion = '2.1.0'
+    androidAnnotationsVersion = '1.0.0'
+    gsonVersion = '2.8.6'
+    okHttpVersion = '3.8.1'
+    retrofitVersion = '2.9.0'
+    timberVersion = '4.5.1'
+    glideVersion = '4.11.0'
+    picassoVersion = '2.71828'
+    glassfishAnnotationVersion = '10.0-b28'
+
+    dagger_version = '2.21'
+    lifecycle_version = "2.0.0"
+    room_version = "2.1.0-alpha03"
+    paging_version = "2.1.0-beta01"
+    nav_version = "1.0.0-alpha07"
+    work_version = "1.0.0-alpha10"
+    ext.anko_version = '0.10.8'
+
+    //Testing
+    //jUnitVersion = '4.12'
+    jUnitVersion = '1.1.1'
+    assertJVersion = '3.11.1'
+    mockitoKotlinVersion = '1.5.0'
+    espressoVersion = '3.2.0'
+    robolectricVersion = '3.4.2'
+    mockitoVersion = '1.9.5'
+    mockitoAndroidVersion = '2.8.9'
+    androidXRulesVersion = '1.1.1'
+    dexmakerMockitoversion = '2.2.0'
+    androidxRunnerVersion = '1.1.0'
+
+    domainDependencies = [
+            //javaxAnnotation:    "name:javax.annotation-api:${javaxAnnotationVersion}",
+            kotlin:             "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}",
+            javaxAnnotation:    "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            javaxInject:        "javax.inject:javax.inject:${javaxInjectVersion}",
+            rxkotlin:             "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
+            rxJava:             "io.reactivex.rxjava2:rxjava:${rxJavaVersion}"
+
+    ]
+
+    domainTestDependencies = [
+            junit:              "androidx.test.ext:junit:${jUnitVersion}",
+            mockito:            "com.nhaarman:mockito-kotlin:${mockitoKotlinVersion}",
+            assertj:            "org.assertj:assertj-core:${assertJVersion}"
+    ]
+
+    dataDependencies = [
+            kotlin:             "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}",
+            javaxAnnotation:    "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            javaxInject:        "javax.inject:javax.inject:${javaxInjectVersion}",
+            rxKotlin:           "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
+            rxJava:             "io.reactivex.rxjava2:rxjava:${rxJavaVersion}"
+
+    ]
+
+    dataTestDependencies = [
+            junit:              "androidx.test.ext:junit:${jUnitVersion}",
+            kotlinJUnit:        "org.jetbrains.kotlin:kotlin-test-junit:${kotlinVersion}",
+            assertj:            "org.assertj:assertj-core:${assertJVersion}",
+            mockito:            "com.nhaarman:mockito-kotlin:${mockitoKotlinVersion}",
+            robolectric:        "org.robolectric:robolectric:${robolectricVersion}"
+    ]
+
+    cacheDependencies = [
+            gson:               "com.google.code.gson:gson:${gsonVersion}",
+            kotlin:             "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}",
+            javaxAnnotation:    "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            javaxInject:        "javax.inject:javax.inject:${javaxInjectVersion}",
+            androidAnnotations: "androidx.annotation:annotation:${androidAnnotationsVersion}",
+            roomRuntime:        "androidx.room:room-runtime:${room_version}",
+            roomCompiler:       "androidx.room:room-compiler:${room_version}",
+            roomRxJava:         "androidx.room:room-rxjava2:${room_version}",
+            rxKotlin:           "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
+            rxJava:             "io.reactivex.rxjava2:rxjava:${rxJavaVersion}"
+
+    ]
+
+    cacheTestDependencies = [
+            junit:              "androidx.test.ext:junit:${jUnitVersion}",
+            kotlinJUnit:        "org.jetbrains.kotlin:kotlin-test-junit:${kotlin_version}",
+            robolectric:        "org.robolectric:robolectric:${robolectricVersion}",
+            assertj:            "org.assertj:assertj-core:${assertJVersion}",
+            mockito:            "com.nhaarman:mockito-kotlin:${mockitoKotlinVersion}",
+            roomTesting:        "androidx.room:room-testing:${room_version}",
+            lifecycleTesting:   "androidx.arch.core:core-testing:${lifecycle_version}",
+            androidRunner:      "androidx.test:runner:${androidxRunnerVersion}",
+            androidRules:       "androidx.test:rules:${androidXRulesVersion}"
+    ]
+
+    remoteDependencies = [
+            gson:               "com.google.code.gson:gson:${gsonVersion}",
+            kotlin:             "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}",
+            javaxAnnotation:    "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            javaxInject:        "javax.inject:javax.inject:${javaxInjectVersion}",
+            androidAnnotations: "androidx.annotation:annotation:${androidAnnotationsVersion}",
+            okHttp:             "com.squareup.okhttp3:okhttp:${okHttpVersion}",
+            okHttpLogger:       "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}",
+            retrofit:           "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            retrofitConverter:  "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+            retrofitAdapter:    "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}",
+            rxKotlin:           "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
+            rxJava:             "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            timber:             "com.jakewharton.timber:timber:${timberVersion}"
+
+
+
+
+    ]
+
+    remoteTestDependencies = [
+            junit:              "androidx.test.ext:junit:${jUnitVersion}",
+            kotlinJUnit:        "org.jetbrains.kotlin:kotlin-test-junit:${kotlin_version}",
+            assertj:            "org.assertj:assertj-core:${assertJVersion}",
+            mockito:            "com.nhaarman:mockito-kotlin:${mockitoKotlinVersion}"
+    ]
+
+    presentationDependencies = [
+            kotlin:             "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}",
+            javaxAnnotation:    "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            javaxInject:        "javax.inject:javax.inject:${javaxInjectVersion}",
+            androidAnnotations: "androidx.annotation:annotation:${androidAnnotationsVersion}",
+            lifecycleExtensions:"androidx.lifecycle:lifecycle-extensions:${lifecycle_version}",
+            rxAndroid:          "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+            rxKotlin:           "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
+            rxJava:             "io.reactivex.rxjava2:rxjava:${rxJavaVersion}"
+
+
+            //lifecycle:        "androidx.lifecycle:lifecycle-extensions:${lifecycle_version}",
+            //lifecycleExtensions:     "androidx.lifecycle:lifecycle-extensions:${lifecycle_version}",
+            //lifecycleCompiler:        "androidx.lifecycle:lifecycle-compiler:${lifecycle_version}"
+
+
+
+    ]
+
+    presentationTestDependencies = [
+            junit:              "androidx.test.ext:junit:${jUnitVersion}",
+            kotlinJUnit:        "org.jetbrains.kotlin:kotlin-test-junit:${kotlin_version}",
+            assertj:            "org.assertj:assertj-core:${assertJVersion}",
+            mockito:            "com.nhaarman:mockito-kotlin:${mockitoKotlinVersion}",
+            robolectric:        "org.robolectric:robolectric:${robolectricVersion}",
+            lifecycleTesting:        "androidx.arch.core:core-testing:${lifecycle_version}"
+    ]
+
+
+
+    mobileUiDependencies = [
+            daggerCompiler:     "com.google.dagger:dagger-compiler:${dagger_version}",
+            dagger:             "com.google.dagger:dagger:${dagger_version}",
+            //dagger:           "com.google.dagger:dagger-android:2.16",
+            daggerSupport:      "com.google.dagger:dagger-android-support:${dagger_version}",
+            daggerProcessor:    "com.google.dagger:dagger-android-processor:${dagger_version}",
+            kotlin:             "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}",
+            glide:              "com.github.bumptech.glide:glide:${glideVersion}",
+            glideProcessor:     "com.github.bumptech.glide:compiler:${glideVersion}",
+            picasso:            "com.squareup.picasso:picasso:${picassoVersion}",
+            javaxAnnotation:    "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            javaxInject:        "javax.inject:javax.inject:${javaxInjectVersion}",
+            timber:             "com.jakewharton.timber:timber:${timberVersion}",
+            glassfishAnnotation:"org.glassfish:javax.annotation:${glassfishAnnotationVersion}",
+            androidAnnotations: "androidx.annotation:annotation:${androidAnnotationsVersion}",
+            appCompat:        	"androidx.appcompat:appcompat:1.1.0-alpha02",
+            recyclerView:       "androidx.recyclerview:recyclerview:1.0.0",
+            constraintlayout:   "androidx.constraintlayout:constraintlayout:2.0.0-alpha3",
+            cardview:           "androidx.cardview:cardview:1.0.0",
+            materialDesign:      "com.google.android.material:material:1.1.0",
+            lifecycleExtensions:"androidx.lifecycle:lifecycle-extensions:${lifecycle_version}",
+            rxAndroid:          "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+            rxKotlin:           "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
+            rxJava:             "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            multidex:           "androidx.multidex:multidex:2.0.0",
+            navigationFragment: "androidx.navigation:navigation-fragment-ktx:2.0.0",
+            navigationUi:       "androidx.navigation:navigation-ui-ktx:2.0.0",
+            kotlinKtx:          "androidx.core:core-ktx:1.1.0-alpha04",
+            coroutines:         "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.0",
+            roomRuntime:        "androidx.room:room-runtime:${room_version}",
+            roomCompiler:       "androidx.room:room-compiler:${room_version}",
+            roomRxJava:         "androidx.room:room-rxjava2:${room_version}",
+            anko:                "org.jetbrains.anko:anko-commons:0.10.8"
+
+    ]
+
+
+    mobileUiTestDependencies = [
+            junit:              "androidx.test.ext:junit:${jUnitVersion}",
+            espressoCore:       "androidx.test.espresso:espresso-core:${espressoVersion}",
+            espressoIntents:    "androidx.test.espresso:espresso-intents:${espressoVersion}",
+            espressoContrib:    "androidx.test.espresso:espresso-contrib:${espressoVersion}",
+            kotlinJUnit:        "org.jetbrains.kotlin:kotlin-test-junit:${kotlin_version}",
+            assertj:            "org.assertj:assertj-core:${assertJVersion}",
+            mockito:            "com.nhaarman:mockito-kotlin:${mockitoKotlinVersion}",
+            mockitoAndroid:     "org.mockito:mockito-android:${mockitoAndroidVersion}",
+            androidRules:       "androidx.test:rules:${androidxRunnerVersion}",
+            androidRunner:      "androidx.test:runner:${androidxRunnerVersion}"
+    ]
+
+
+
+}

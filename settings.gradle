@@ -1,0 +1,7 @@
+include ':Remote'
+include ':Cache'
+include ':Data'
+include ':Presentation'
+include ':Domain'
+include ':Mobile_Ui'
+rootProject.name = "Albums"

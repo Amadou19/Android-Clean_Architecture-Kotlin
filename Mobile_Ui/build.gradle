@@ -1,0 +1,91 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+
+}
+
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+    compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
+
+    defaultConfig {
+        applicationId "com.amadoutirera.mobile_ui"
+        minSdkVersion globalConfiguration["androidMinSdkVersion"]
+        targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        //testInstrumentationRunner "com.amadoutirera.mobile_ui.test.TestRunner"
+
+        multiDexEnabled true
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    def mobileUiDependencies = rootProject.ext.mobileUiDependencies
+    def mobileUiTestDependencies = rootProject.ext.mobileUiTestDependencies
+
+    implementation project(':Presentation')
+    implementation project(':Data')
+    implementation project(':Remote')
+    implementation project(':Cache')
+    implementation project(':Domain')
+
+    implementation mobileUiDependencies.multidex
+    implementation mobileUiDependencies.javaxAnnotation
+    implementation mobileUiDependencies.kotlin
+    implementation mobileUiDependencies.constraintlayout
+    implementation mobileUiDependencies.javaxInject
+    implementation mobileUiDependencies.rxKotlin
+    implementation mobileUiDependencies.rxJava
+    implementation mobileUiDependencies.androidAnnotations
+    implementation mobileUiDependencies.appCompat
+    implementation mobileUiDependencies.recyclerView
+    implementation mobileUiDependencies.materialDesign
+    implementation mobileUiDependencies.timber
+    implementation mobileUiDependencies.rxAndroid
+    implementation mobileUiDependencies.picasso
+
+    implementation mobileUiDependencies.dagger
+    implementation mobileUiDependencies.daggerSupport
+    kapt mobileUiDependencies.daggerProcessor
+    compileOnly mobileUiDependencies.glassfishAnnotation
+
+    implementation mobileUiDependencies.lifecycleExtensions
+    implementation mobileUiDependencies.roomRuntime
+    implementation mobileUiDependencies.roomRxJava
+
+    kapt mobileUiDependencies.roomCompiler
+    kapt mobileUiDependencies.daggerCompiler
+    kaptTest mobileUiDependencies.daggerCompiler
+    kaptAndroidTest mobileUiDependencies.daggerCompiler
+
+    testImplementation mobileUiTestDependencies.kotlinJUnit
+    androidTestImplementation mobileUiTestDependencies.junit
+    androidTestImplementation mobileUiTestDependencies.mockito
+    androidTestImplementation mobileUiTestDependencies.mockitoAndroid
+    androidTestImplementation mobileUiTestDependencies.espressoCore
+    androidTestImplementation mobileUiTestDependencies.androidRunner
+    androidTestImplementation mobileUiTestDependencies.androidRules
+    androidTestImplementation mobileUiTestDependencies.espressoIntents
+    androidTestImplementation mobileUiTestDependencies.espressoContrib
+
+}
